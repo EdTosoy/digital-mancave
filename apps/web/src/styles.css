@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
+@import '@fontsource-variable/figtree/wght-italic.css';
+body {
+  font-family: 'Figtree Variable', sans-serif;
+}
+* {
+  font-family: 'Figtree Variable', sans-serif !important;
+}
