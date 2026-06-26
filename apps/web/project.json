@@ -5,6 +5,15 @@
   "prefix": "app",
   "sourceRoot": "apps/web/src",
   "tags": [],
+  "schematics": {
+    "@nx/angular:component": {
+      "standalone": true,
+      "inlineTemplate": true,
+      "inlineStyle": true,
+      "skipTests": true,
+      "style": "scss"
+    }
+  },
   "targets": {
     "build": {
       "executor": "@angular/build:application",

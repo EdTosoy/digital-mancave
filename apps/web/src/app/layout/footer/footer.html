@@ -1,1 +1,32 @@
-<p>footer works!</p>
+<footer class="border-t py-10">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+    <div>
+      <h5 class="font-semibold">Edberto Tosoy</h5>
+      <p class="text-muted-foreground text-sm">
+        Full-Stack Developer • Platform Engineering Enthusiast
+      </p>
+      <p class="text-muted-foreground mt-2 text-xs">
+        © {{ year }} Edberto Tosoy. All rights reserved.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <a hlmBtn variant="ghost" size="icon" href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+        <ng-icon name="lucideGithub" size="18" />
+      </a>
+
+      <a hlmBtn variant="ghost" size="icon" href="https://linkedin.com/in/yourusername" target="_blank"
+        aria-label="LinkedIn">
+        <ng-icon name="lucideLinkedin" size="18" />
+      </a>
+
+      <a hlmBtn variant="ghost" size="icon" href="mailto:you@example.com" aria-label="Email">
+        <ng-icon name="lucideMail" size="18" />
+      </a>
+
+      <button hlmBtn variant="outline" size="icon" aria-label="Back to top" (click)="scrollToTop()">
+        <ng-icon name="lucideArrowUp" size="18" />
+      </button>
+    </div>
+  </div>
+</footer>

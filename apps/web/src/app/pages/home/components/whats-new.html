@@ -1,0 +1,55 @@
+<div class="pb-40">
+  <h4>What's New</h4>
+
+  <hlm-tabs tab="projects">
+    <hlm-tabs-list>
+      <button hlmTabsTrigger="projects">
+        <ng-icon name="lucideAppWindow" />
+        Projects
+      </button>
+
+      <button hlmTabsTrigger="posts">
+        <ng-icon name="lucideCode" />
+        Posts
+      </button>
+
+      <button hlmTabsTrigger="gallery">
+        <ng-icon name="lucideCode" />
+        Gallery
+      </button>
+    </hlm-tabs-list>
+  </hlm-tabs>
+
+  <div class="my-6 rounded-2xl border p-6">
+
+    <div>
+      <img src="/assets/whatsnew.png" alt="whatsNew" width="450" height="514">
+    </div>
+  </div>
+
+  <nav hlmPagination>
+    <ul hlmPaginationContent>
+
+      <li hlmPaginationItem class="mr-3">
+        <button hlmPaginationPrevious [disabled]="currentPage() === 1" (click)="previous()">
+          Previous
+        </button>
+      </li>
+
+      @for (page of pages; track page) {
+      <li hlmPaginationItem>
+        <button hlmPaginationLink [isActive]="currentPage() === page" (click)="currentPage.set(page)">
+          {{ page }}
+        </button>
+      </li>
+      }
+
+      <li hlmPaginationItem class="ml-3">
+        <button hlmPaginationNext [disabled]="currentPage() === totalPages" (click)="next()">
+          Next
+        </button>
+      </li>
+
+    </ul>
+  </nav>
+</div>

@@ -10,14 +10,39 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@personal-hub/database": ["libs/database/src/index.ts"],
-      "@personal-hub/data-access": ["libs/data-access/src/index.ts"]
+      "@personal-hub/database": [
+        "libs/database/src/index.ts"
+      ],
+      "@personal-hub/data-access": [
+        "libs/data-access/src/index.ts"
+      ],
+      "@spartan-ng/helm/pagination": [
+        "libs/ui/pagination/src/index.ts"
+      ],
+      "@spartan-ng/helm/tabs": [
+        "libs/ui/tabs/src/index.ts"
+      ],
+      "@spartan-ng/helm/utils": [
+        "libs/ui/utils/src/index.ts"
+      ],
+      "@spartan-ng/helm/button": [
+        "libs/ui/button/src/index.ts"
+      ],
+      "@spartan-ng/helm/select": [
+        "libs/ui/select/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
