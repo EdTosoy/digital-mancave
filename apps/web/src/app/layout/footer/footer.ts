@@ -21,7 +21,7 @@ import { HlmButtonImports } from "@spartan-ng/helm/button";
   ],
   templateUrl: "./footer.html"
 })
-export class FooterComponent {
+export class Footer {
   year = new Date().getFullYear();
 
   scrollToTop() {
