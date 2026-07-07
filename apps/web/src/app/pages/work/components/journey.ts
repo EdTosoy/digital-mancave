@@ -13,13 +13,13 @@ interface JourneyInterface {
     <div class="pb-40">
       <h4 class="font-extrabold mb-8">My Journey</h4>
       @for (job of journeys; track job.title; let lastJob = $last) {
-        <div class="grid grid-cols-4 items-start relative">
+        <div class="grid grid-cols-4 items-center relative">
           <p
             class="flex justify-between items-center pr-6 w-2xs font-semibold text-text-accent text-base">
             {{ job.duration }}
             <span class="size-4 rounded-full bg-text-accent z-10"></span>
           </p>
-          <h5 class="col-span-3 text-3xl font-semibold">{{ job.title }}</h5>
+          <h5 class="col-span-3 text-2xl font-semibold">{{ job.title }}</h5>
           <div [class.w-px]="!lastJob" class="w-0 h-full bg-amber-700 justify-self-end mr-8"></div>
           <div class="col-span-3 mt-4">
             @for (task of job.tasks; track task; let last = $last) {
