@@ -18,8 +18,8 @@
             "glob": "**/*",
             "input": "apps/web/public"
           }
-        ],
-        "styles": ["apps/web/src/styles.css"],
+       ],
+        "styles": ["apps/web/src/styles.css"]
       },
       "configurations": {
         "production": {

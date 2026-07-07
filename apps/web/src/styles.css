@@ -942,3 +942,13 @@ HUB LAYOUT — Page-level grid (digital mancave)
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes stack-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.45);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(405deg) scale(1.45);
+  }
+}

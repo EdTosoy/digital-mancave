@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from './components/hero';
-import { WhatsNew } from "./components/whatsNew";
+import { WhatsNew } from "./components/whats-new";
 import { About } from "./components/about";
 
 @Component({

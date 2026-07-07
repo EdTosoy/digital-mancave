@@ -1,12 +1,17 @@
 
 import { Component } from '@angular/core';
-import { About } from "../home/components/about";
+import { Journey } from "./components/journey";
+import { Stack } from "./components/stack";
 
 @Component({
-  selector: 'app-home',
-  imports: [About],
+  selector: 'app-work',
+  imports: [Journey, Stack],
   template: `
-          <app-about />
-  `,
+    <div class="flex justify-between">
+      <app-journey/>
+      <app-stack/>
+    </div>
+  `
 })
+
 export class Work { }
