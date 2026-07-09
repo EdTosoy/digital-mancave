@@ -11,7 +11,8 @@ interface JourneyInterface {
   standalone: true,
   template: `
     <div class="pb-40">
-      <h4 class="font-extrabold mb-8">My Journey</h4>
+      <!-- NOTE: This is intentionally a personal journey, not a resume.It's meant to show how I grew as an engineer and as a person. -->
+      <h4 class="font-extrabold mb-8">My Journey </h4>
       @for (job of journeys; track job.title; let lastJob = $last) {
         <div class="grid grid-cols-4 items-center relative">
           <p
@@ -25,7 +26,7 @@ interface JourneyInterface {
             @for (task of job.tasks; track task; let last = $last) {
               <div class="flex items-baseline gap-3">
                 <span class="size-1.5 rounded-full bg-black mt-2 shrink-0"></span>
-                <p [class.mb-8]="last">{{ task }}</p>
+                <p [class.mb-8]="last" class="text-sm">{{ task }}</p>
               </div>
             }
           </div>
@@ -34,34 +35,59 @@ interface JourneyInterface {
     </div>
   `,
 })
+
 export class Journey {
+
   journeys: JourneyInterface[] = [
     {
-      duration: 'Jul 2025 — Present',
-      title: 'Self-Investment Year: Rebuilding My Workflow from the Ground Up',
+      duration: 'January 26, 2018',
+      title: 'The Spark That Started It All',
       tasks: [
-        'Rebuilt my entire dev environment on NixOS, learning declarative system config from scratch.',
-        'Switched to Dvorak and Neovim to slow down and rebuild muscle memory around deliberate practice.',
-        'Upskilled deliberately in DevOps and platform engineering — Docker, CI/CD, Terraform, Kubernetes basics.',
+        'Like many kids, I thought hackers were the coolest people alive—black hoodies, Linux terminals, and endless command lines. That curiosity led me to Linux, Bash, and Git.',
+        'Started with Python, NumPy, and Pandas during the data science boom, but eventually discovered I enjoyed building something more than analyzing data, so I transitioned to backend development with Django and Flask.',
+        'Created my first GitHub account: https://github.com/WilbertTosoy',
+      ],
+    },
+    {
+      duration: 'Mar 2020 — Feb 2021',
+      title: 'Turning Lockdown into an Opportunity',
+      tasks: [
+        'Used the lockdown to teach myself HTML, CSS, JavaScript, React, SCSS, Node.js, Firebase, Figma, and UI/UX design while building projects to reinforce what I learned.',
+        'Built my first practice project: https://edtosoy-match.firebaseapp.com/',
+        'Created my first portfolio: https://edtportfolio.netlify.app/',
+        'Expanded into full-stack development with Next.js, Apollo GraphQL, TypeGraphQL, TypeORM, Express, PostgreSQL, MongoDB, JWT, Cypress, and Jest, then launched my second portfolio: https://ed-tosoy-portfolio.vercel.app/',
+      ],
+    },
+    {
+      duration: 'Feb 2021 — Jul 2022',
+      title: 'Landing My First Software Engineering Job at 18',
+      tasks: [
+        'Landed a Software Engineering role at Metrobank, one of the largest banks in the Philippines, while continuing college through remote work.',
+        'Worked across multiple teams, integrating front-end applications with REST APIs and maintaining end-to-end tests with Cypress.',
+        'Built performant, reusable interfaces using React, TypeScript, Ant Design, React Hook Form, Redux, and SCSS.',
       ],
     },
     {
       duration: 'Sep 2021 — Jun 2025',
-      title: 'Finished College',
+      title: 'Stepping Away from Work to Focus on College',
       tasks: [
-        'Built my first full-stack projects, moving from data-focused scripting into real web development.',
-        'Picked up Angular, NestJS, and PostgreSQL through personal projects outside the classroom.',
-        'Learned to work with Git, monorepos, and structured backend architecture on my own time.',
+        'Realized that technical skills alone would not make me the person I wanted to become, so I invested in my emotional, physical, financial, social, and spiritual growth.',
+        'Joined an IT organization, built lifelong friendships, traveled, attended startup and tech events, and read books that reshaped my perspective.',
+        'Deepened my understanding of computer networking by learning DNS, HTTP/HTTPS, subnetting, firewalls, ACLs, load balancing, Nginx, reverse proxies, and VPNs.',
+        'Applied everything I learned by building our capstone project with React, Redux Toolkit, Socket.IO, i18next, and Cloudinary.',
       ],
     },
     {
-      duration: '2018',
-      title: 'Started Programming',
+      duration: 'Jul 2025 — Present',
+      title: 'Self-Investment Year, The Year I Bet on Myself',
       tasks: [
-        'Taught myself Python, NumPy, and Pandas during the early data science wave.',
-        'Explored data analysis and scripting before eventually pivoting toward web development.',
-        'Discovered that building things — not just studying theory — was what kept me engaged.',
+        'Started experimenting with AI development using Amazon Bedrock, Claude, Google AI, and many other providers, only to discover the classic founder’s challenge: great ideas, but limited resources.',
+        'Expanded my skill set by learning n8n, data structures & algorithms, Go, and Arch Linux while continuously building projects.',
+        'Completely rebuilt my development environment on NixOS, switch to Dvorak keyboard, moved to Neovim code editor, and build keyboard driven work station.',
+        'Built a strong DevOps foundation with Docker, CI/CD, Prometheus, Grafana, Terraform, and Kubernetes.',
+        'Transitioned into enterprise development by learning Angular, NestJS, Nx monorepos, RabbitMQ, event-driven architecture, and microservices.',
       ],
     },
   ];
+
 }
