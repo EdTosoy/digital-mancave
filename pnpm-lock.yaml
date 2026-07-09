@@ -228,6 +228,9 @@ importers:
       prettier:
         specifier: ~3.6.2
         version: 3.6.2
+      prettier-plugin-angular:
+        specifier: ^0.3.2
+        version: 0.3.2(prettier@3.6.2)
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
@@ -4132,6 +4135,10 @@ packages:
       typescript: '*'
       typescript-eslint: ^8.0.0
 
+  angular-html-parser@10.11.0:
+    resolution: {integrity: sha512-3vERzJ65UFDr3C7uozLJwsNcQS3FS784dSh583oDgDTTZMgXe3/pdyXgKndxiP5R2lvYRfW6gSl145Hnyf2OFA==}
+    engines: {node: '>= 14'}
+
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
     engines: {node: '>=6'}
@@ -7341,6 +7348,11 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier-plugin-angular@0.3.2:
+    resolution: {integrity: sha512-MrBTZLX24FRXrD7A2B7VqdGPigsAZDwrHNqheMQC62WE7tAQ8+BK85/fs9GD5MIwz1fH8JKNfWiTyzDuRGFPUg==}
+    peerDependencies:
+      prettier: '>=3.0.0'
 
   prettier@3.6.2:
     resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
@@ -13458,6 +13470,8 @@ snapshots:
       - chokidar
       - supports-color
 
+  angular-html-parser@10.11.0: {}
+
   ansi-colors@4.1.3: {}
 
   ansi-escapes@4.3.2:
@@ -17006,6 +17020,11 @@ snapshots:
   powershell-utils@0.1.0: {}
 
   prelude-ls@1.2.1: {}
+
+  prettier-plugin-angular@0.3.2(prettier@3.6.2):
+    dependencies:
+      angular-html-parser: 10.11.0
+      prettier: 3.6.2
 
   prettier@3.6.2: {}
 
