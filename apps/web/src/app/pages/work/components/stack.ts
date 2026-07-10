@@ -33,12 +33,14 @@ interface StackItem {
             dark:before:[--gradient-0:#EE9A01] dark:before:[--gradient-1:#2E1A00]
           "
         >
-          <div class="
+          <div
+            class="
             flex aspect-square items-center justify-center
             w-[95%]
-          ">
-              <img
-                class="
+          "
+          >
+            <img
+              class="
                   bg-gray-400 p-4
                   relative z-10 object-contain
                   transition-all
@@ -46,15 +48,15 @@ interface StackItem {
                   dark:opacity-60 dark:brightness-200
                   dark:group-hover:opacity-100 dark:group-hover:brightness-100
                 "
-                loading="lazy"
-                [src]="'assets/icons/' + item.icon"
-                [alt]="item.name"
-              />
-            </div>
+              loading="lazy"
+              [src]="'assets/icons/' + item.icon"
+              [alt]="item.name"
+            />
+          </div>
         </a>
       }
     </div>
-`,
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Stack {

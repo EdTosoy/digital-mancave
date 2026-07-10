@@ -12,7 +12,7 @@ import { FeaturedProject } from './components/featured-project';
         <app-journey />
         <app-featured-project />
       </div>
-      <div class="">
+      <div>
         <app-stack />
       </div>
     </div>

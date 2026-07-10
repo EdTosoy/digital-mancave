@@ -21,15 +21,13 @@
   </hlm-tabs>
 
   <div class="my-6 rounded-2xl border p-6">
-
     <div>
-      <img src="/assets/whatsnew.png" alt="whatsNew" width="450" height="514">
+      <img src="/assets/whatsnew.png" alt="whatsNew" width="450" height="514" />
     </div>
   </div>
 
   <nav hlmPagination>
     <ul hlmPaginationContent>
-
       <li hlmPaginationItem class="mr-3">
         <button hlmPaginationPrevious [disabled]="currentPage() === 1" (click)="previous()">
           Previous
@@ -38,7 +36,11 @@
 
       @for (page of pages; track page) {
       <li hlmPaginationItem>
-        <button hlmPaginationLink [isActive]="currentPage() === page" (click)="currentPage.set(page)">
+        <button
+          hlmPaginationLink
+          [isActive]="currentPage() === page"
+          (click)="currentPage.set(page)"
+        >
           {{ page }}
         </button>
       </li>
@@ -49,7 +51,6 @@
           Next
         </button>
       </li>
-
     </ul>
   </nav>
 </div>

@@ -1,15 +1,10 @@
-import { Component } from "@angular/core";
-import { NgIcon, provideIcons } from "@ng-icons/core";
-import {
-  lucideGithub,
-  lucideLinkedin,
-  lucideMail,
-  lucideArrowUp,
-} from "@ng-icons/lucide";
-import { HlmButtonImports } from "@spartan-ng/helm/button";
+import { Component } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { lucideGithub, lucideLinkedin, lucideMail, lucideArrowUp } from '@ng-icons/lucide';
+import { HlmButtonImports } from '@spartan-ng/helm/button';
 
 @Component({
-  selector: "app-footer",
+  selector: 'app-footer',
   imports: [NgIcon, HlmButtonImports],
   providers: [
     provideIcons({
@@ -19,7 +14,7 @@ import { HlmButtonImports } from "@spartan-ng/helm/button";
       lucideArrowUp,
     }),
   ],
-  templateUrl: "./footer.html"
+  templateUrl: './footer.html',
 })
 export class Footer {
   year = new Date().getFullYear();
@@ -27,7 +22,7 @@ export class Footer {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 }

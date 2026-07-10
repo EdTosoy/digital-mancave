@@ -23,7 +23,7 @@ import { HlmPaginationImports } from '@spartan-ng/helm/pagination';
     }),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./whats-new.html"
+  templateUrl: './whats-new.html',
 })
 export class WhatsNew {
   readonly totalPages = 5;
