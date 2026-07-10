@@ -3,7 +3,7 @@
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css';
 
-@import "@spartan-ng/brain/hlm-tailwind-preset.css";
+@import '@spartan-ng/brain/hlm-tailwind-preset.css';
 /* You can add global styles to this file, and also import other style files */
 
 @import '@fontsource-variable/figtree/wght-italic.css';
@@ -250,11 +250,9 @@ THEME TOKENS — Light mode (default)
 
     --shadow-raised: 0 4px 6px rgb(0 0 0 / 0.06), 0 2px 4px rgb(0 0 0 / 0.04);
 
-    --shadow-elevated:
-      0 10px 15px rgb(0 0 0 / 0.08), 0 4px 6px rgb(0 0 0 / 0.04);
+    --shadow-elevated: 0 10px 15px rgb(0 0 0 / 0.08), 0 4px 6px rgb(0 0 0 / 0.04);
 
-    --shadow-overlay:
-      0 20px 25px rgb(0 0 0 / 0.1), 0 10px 10px rgb(0 0 0 / 0.04);
+    --shadow-overlay: 0 20px 25px rgb(0 0 0 / 0.1), 0 10px 10px rgb(0 0 0 / 0.04);
   }
 
   /* ---------------------------------------------------------------------------
@@ -293,14 +291,11 @@ Only the semantic tokens change. Brand color stays the same.
     /* Shadows — glow rings replace drop shadows on dark bg */
     --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.05);
 
-    --shadow-raised:
-      0 0 0 1px rgb(255 255 255 / 0.08), 0 4px 16px rgb(0 0 0 / 0.4);
+    --shadow-raised: 0 0 0 1px rgb(255 255 255 / 0.08), 0 4px 16px rgb(0 0 0 / 0.4);
 
-    --shadow-elevated:
-      0 0 0 1px rgb(255 255 255 / 0.1), 0 10px 30px rgb(0 0 0 / 0.5);
+    --shadow-elevated: 0 0 0 1px rgb(255 255 255 / 0.1), 0 10px 30px rgb(0 0 0 / 0.5);
 
-    --shadow-overlay:
-      0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 40px rgb(0 0 0 / 0.6);
+    --shadow-overlay: 0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 40px rgb(0 0 0 / 0.6);
   }
 
   /* ---------------------------------------------------------------------------
@@ -635,8 +630,8 @@ SURFACE CARDS — Base card styles with nested radius math
     container-type: inline-size;
   }
 
-  .card>img,
-  .card>.card-media {
+  .card > img,
+  .card > .card-media {
     border-radius: var(--inner-radius);
   }
 
@@ -749,10 +744,12 @@ ANIMATED GRADIENT BORDER — Uses @property --gradient-angle
 --------------------------------------------------------------------------- */
 
   .gradient-border {
-    background: conic-gradient(from var(--gradient-angle),
-        var(--color-brand),
-        var(--color-brand-light),
-        var(--color-brand));
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--color-brand),
+      var(--color-brand-light),
+      var(--color-brand)
+    );
     animation: rotate-gradient 4s linear infinite;
     border-radius: var(--radius-2xl);
     padding: 2px;
@@ -816,7 +813,6 @@ HUB LAYOUT — Page-level grid (digital mancave)
 ============================================================================= */
 
 @layer utilities {
-
   /* Hide scrollbar visually but keep scroll functionality */
   .scrollbar-none {
     scrollbar-width: none;
@@ -867,11 +863,8 @@ HUB LAYOUT — Page-level grid (digital mancave)
   }
 }
 
-
 :root {
   color-scheme: light;
-
-
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);

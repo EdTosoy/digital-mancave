@@ -16,39 +16,48 @@ interface Tasks {
   standalone: true,
   template: `
     <div class="pb-40">
-      <!-- NOTE: This is intentionally a personal journey, not a resume.It's meant to show how I grew as an engineer and as a person. -->
       <h4 class="font-extrabold mb-8">My Journey</h4>
       @for (job of journeys; track job.title; let lastJob = $last) {
-        <div class="grid grid-cols-4 items-center relative">
-          <p
-            class="flex justify-between items-center pr-6 w-2xs font-semibold text-text-accent text-base"
-          >
+        <div class="grid grid-cols-[1fr_20px_3fr] gap-4">
+          <p class="flex justify-between items-baseline font-semibold text-text-accent text-lg">
             {{ job.duration }}
-            <span class="size-4 rounded-full bg-text-accent z-10"></span>
           </p>
-          <h5 class="col-span-3 text-2xl font-semibold">{{ job.title }}</h5>
-          <div [class.w-px]="!lastJob" class="w-0 h-full bg-amber-700 justify-self-end mr-8"></div>
-          <div class="col-span-3 mt-4">
-            @for (task of job.tasks; track task.text; let last = $last) {
-              <div class="flex items-baseline gap-3">
-                <span class="size-1.5 rounded-full bg-black mt-2 shrink-0"></span>
 
-                <p [class.mb-8]="last" class="text-sm">
-                  {{ task.text }}
-
-                  @if (task.url) {
-                    <a
-                      [href]="task.url"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="ml-1 text-text-accent underline hover:opacity-80 transition-opacity"
-                    >
-                      {{ task.label ?? task.url }}
-                    </a>
-                  }
-                </p>
-              </div>
+          <!-- Timeline column: circle + connecting line -->
+          <div class="relative flex justify-center">
+            <!-- the line: runs the full height of this row, hidden on the last item -->
+            @if (!lastJob) {
+              <div class="absolute top-0 bottom-0 w-px bg-text-accent/30"></div>
             }
+            <!-- the circle node -->
+            <div
+              class="relative z-10 size-4 rounded-full bg-text-accent ring-4 ring-white mt-2"
+            ></div>
+          </div>
+
+          <div class="items-baseline">
+            <h5 class="text-2xl font-semibold">{{ job.title }}</h5>
+            <div class="mt-4">
+              @for (task of job.tasks; track task.text; let last = $last) {
+                <div class="flex items-baseline gap-3">
+                  <span class="size-1.5 rounded-full bg-black mt-2 shrink-0"></span>
+                  <p [class.mb-8]="last" class="text-sm max-w-[72ch]">
+                    {{ task.text }}
+                    @if (task.url) {
+                      <a
+                        [href]="task.url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="ml-1
+                        text-text-accent underline hover:opacity-80 transition-opacity"
+                      >
+                        {{ task.label ?? task.url }}
+                      </a>
+                    }
+                  </p>
+                </div>
+              }
+            </div>
           </div>
         </div>
       }

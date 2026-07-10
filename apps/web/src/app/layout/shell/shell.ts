@@ -10,7 +10,7 @@ import { Footer } from '../footer/footer';
   template: `
     <div class="bg-brand-light-blue p-1.5 text-center text-white">WIP</div>
     <main class="max-w-7xl mx-auto">
-      <div class="px-20">
+      <div class="px-10">
         <app-header />
         <router-outlet />
       </div>
